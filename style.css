@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main{
+  perspective: 1000px;
+  margin-top: 250px;
+}
+body{
+  background-color: rgb(40, 38, 38);
+}
+.box{
+  transform-style: preserve-3d;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  animation: spin 15s infinite linear;
+  margin: 20px auto;
+  transform-origin: 100% 50%;
+  top:100px;
+}
+@keyframes spin {
+  from{
+    transform: rotateX(-45deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-45deg) rotateY(360deg);
+  }
+}
+.face{
+  width: 300px;
+  height: 300px;
+  border: 5px outset #ccc;
+  text-align: center;
+  font-size: 40pt;
+  position: absolute;
+  animation: pulsate 8s infinite linear;  
+  background-color: #2653ad;
+  transition: transform 1s ease-out, opacity 1s linear;
+  box-sizing: border-box;
+  transform-origin: 50% 300px;
+}
+
+
+.left{
+  transform: rotateY(90deg) translateZ(150px) rotateX(0deg);
+  background: url("https://bcp.cdnchinhphu.vn/Uploaded/buithuhuong/2018_07_19/1531968178U23VN.png");
+  background-size: cover;
+}
+
+.box:hover .left{
+  transform: rotateY(90deg) translateZ(150px) rotateX(-90deg);
+}
+
+
+.right{
+  transform: rotateY(-90deg) translateZ(150px);
+  background: url("https://image-us.24h.com.vn/upload/2-2022/images/2022-05-20/Gianh-ve-vao-chung-ket-SEA-Games-31-gap-Thai-Lan-U23-Viet-Nam-duoc-thuong-nong-vn-1653003207-180-width740height482.jpg");
+  background-size: cover;
+}
+
+.box:hover .right{
+  transform: rotateY(-90deg) translateZ(150px) rotateX(-90deg);
+}
+
+
+
+.front{
+  transform: translateZ(150px);
+  background: url("https://bcp.cdnchinhphu.vn/334894974524682240/2022/5/19/u23vietnam-16526032361671673610037-16529443923611434566845.jpg");
+  background-size: cover;
+}
+
+.box:hover .front{
+  transform: translateZ(150px) rotateX(-90deg);
+}
+
+.back{
+  transform: translateZ(-150px);
+  background: url("https://image-us.24h.com.vn/upload/2-2022/images/2022-05-19/U23-Viet-Nam-kich-chien-U23-Malaysia-ban-ket-SEA-Games-120-phut-nghet-tho-vo-oa-vn-0-1652971107-111-width740height760.jpg");
+  background-size: cover;
+}
+
+.box:hover .back{
+  transform: translateZ(-150px) rotateX(90deg);
+}
+
+
+.top{
+  transform: rotateX(90deg) translateZ(150px);
+  background: url("https://cf.shopee.vn/file/22d5c41e99bcf2cfd6406159509f9056_tn");
+  background-size: cover;
+  transform-origin: 50% 50%;
+}
+
+.box:hover .top{
+  opacity: 0;
+}
+
+.bottom{
+  transform: rotateX(90deg) translateZ(-150px);
+  background: url("https://tlpd.vn/lich-thi-dau-bong-da-seagame/imager_2474.jpg");
+  background-size: cover;
+  transform-origin: 50% 50%;
+}
